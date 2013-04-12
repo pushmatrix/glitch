@@ -1,0 +1,25 @@
+body {
+  font-family: Courier;
+}
+#webcam {
+  display: none;
+  width: 400px;
+  height: 400px;
+}
+#pre, #post {
+
+}
+#container {
+  width: 400px;
+  margin: 0px auto;
+}
+#sentence {
+  width: 100%;
+  font-family: courier;
+  height: 100px;
+  border: none;
+  resize: none;
+}
+#sentence:focus {
+  outline: 0;
+}
