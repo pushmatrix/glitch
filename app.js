@@ -2,7 +2,7 @@ $(function(){
 
   var video, context, canvas;
   // what point in the video that we're going to put the text in
-  var insertionIndex = 1000;
+  var insertionIndex = [300, 900, 2000, 4000, 6000];
 
   $('#sentence').focus();
   $('body').keydown(function(){
@@ -85,8 +85,10 @@ $(function(){
     }
 
     var sentence = $('#sentence').val();
-    for (var i = 0; i < sentence.length; i++) {
-     array[insertionIndex + i] = sentence[i];
+    for (var i = 0; i < insertionIndex.length; i++) {
+      for (var j = 0; j < sentence.length; j++) {
+        array[insertionIndex[i] + j] = sentence[j];
+      }
     }
 
     return new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
